@@ -21,7 +21,7 @@ function App() {
 
     try {
       await axios.post("http://localhost:3000/contact", formData);
-      console.log("Form submitted successfully!");
+      console.log("Form submitted successfully!", formData);
     } catch (error) {
       console.error("Error submitting form:", error);
     }
