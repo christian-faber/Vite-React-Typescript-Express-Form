@@ -20,6 +20,9 @@ app.post("/contact", (req, res) => {
   res.status(200).send("Form submitted");
 });
 
+app.get("/", (req, res) => {
+  res.send("server is running!!");
+});
 app.get("*", (req, res) => {
   res.status(404).send("Not Found");
 });
