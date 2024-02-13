@@ -16,8 +16,12 @@ app.use(cors(corsOptions));
 
 app.post("/contact", (req, res) => {
   const contactInfo = req.body;
-  console.log("received contact info:", contactInfo);
+  console.log("Contact form data in console:", contactInfo);
   res.status(200).send("Form submitted");
+});
+
+app.get("*", (req, res) => {
+  res.status(404).send("Not Found");
 });
 
 const port = 3000;
